@@ -14,11 +14,17 @@
         <xs:element name="name">
           <xs:simpleType>
             <xs:restriction base="xs:string">
+              <xs:maxLength value="250"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="productNumber">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
               <xs:maxLength value="50"/>
             </xs:restriction>
           </xs:simpleType>
         </xs:element>
-        <xs:element name="productNumber" type="xs:string"/>
         <xs:element name="color" type="xs:string"/>
         <xs:element name="listPrice" type="xs:decimal"/>
         <xs:element name="sellStartDate" type="xs:dateTime"/>
