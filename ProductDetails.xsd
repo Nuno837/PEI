@@ -41,8 +41,18 @@
             </xs:restriction>
           </xs:simpleType>
         </xs:element>
-        <xs:element name="sellStartDate" type="xs:dateTime"/>
-        <xs:element name="sellEndtDate" type="xs:dateTime"/>
+        <xs:element name="sellStartDate">
+          <xs:simpleType>
+            <xs:restriction base="xs:dateTime">
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="sellEndtDate">
+          <xs:simpleType>
+            <xs:restriction base="xs:dateTime">
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
