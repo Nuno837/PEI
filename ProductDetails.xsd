@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.estg.ipp.pt/productDetails" xmlns="http://www.estg.ipp.pt/productDetails" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.estg.ipp.pt/productDetails" 
+  xmlns="http://www.estg.ipp.pt/productDetails" elementFormDefault="qualified">
   <xs:element name="products">
     <xs:complexType>
       <xs:sequence>
@@ -32,7 +33,14 @@
             </xs:restriction>
           </xs:simpleType>
         </xs:element>
-        <xs:element name="listPrice" type="xs:decimal"/>
+        <xs:element name="listPrice">
+          <xs:simpleType>
+            <xs:restriction base="xs:decimal">
+              <xs:minLength value="0"/>
+              <xs:maxLength value="unbounded"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
         <xs:element name="sellStartDate" type="xs:dateTime"/>
         <xs:element name="sellEndtDate" type="xs:dateTime"/>
       </xs:sequence>
