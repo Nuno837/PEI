@@ -3,7 +3,14 @@
   <xs:element name="products">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="productID" type="xs:integer"/>
+        <xs:element name="productID">
+          <xs:simpleType>
+            <xs:restriction base="xs:integer">
+              <xs:minInclusive value="0"/>
+              <xs:maxInclusive value="unbounded"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
         <xs:element name="name" type="xs:string"/>
         <xs:element name="productNumber" type="xs:string"/>
         <xs:element name="color" type="xs:string"/>
