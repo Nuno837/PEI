@@ -2,8 +2,6 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.estg.ipp.pt/productDetails" 
   xmlns="http://www.estg.ipp.pt/productDetails" elementFormDefault="qualified">
 
-  <!-- TODO: Verificar a existencia de restrições nos elementos Data e Preço -->
-
   <xs:element name="products">
     <xs:complexType>
       <xs:sequence>
@@ -47,12 +45,16 @@
         <xs:element name="sellStartDate">
           <xs:simpleType>
             <xs:restriction base="xs:dateTime">
+              <xs:minInclusive value="1900-01-01T00 : 00 : 00.0Z"/>
+              <xs:maxInclusive value="2200-01-01T00 : 00 : 00.0Z"/>
             </xs:restriction>
           </xs:simpleType>
         </xs:element>
         <xs:element name="sellEndtDate">
           <xs:simpleType>
             <xs:restriction base="xs:dateTime">
+              <xs:minInclusive value="1900-01-01T00 : 00 : 00.0Z"/>
+              <xs:maxInclusive value="2200-01-01T00 : 00 : 00.0Z"/>
             </xs:restriction>
           </xs:simpleType>
         </xs:element>
