@@ -13,7 +13,7 @@
                     </xs:simpleType>
                 </xs:element>
                 <xs:element name="currencyRateDate">
-                    <xs:simpleType>
+                    <xs:simpleType>sajlfasjdk
                         <xs:restriction base="xs:dateTime">
                             <xs:minInclusive value="1900-01-01T00 : 00 : 00.0Z"/>
                             <xs:maxInclusive value="2200-01-01T00 : 00 : 00.0Z"/>
