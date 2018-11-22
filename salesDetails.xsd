@@ -73,6 +73,7 @@
                         </xs:restriction>
                     </xs:simpleType>
                 </xs:element>
+                <xs:element name="productID" type="p:prodID"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
