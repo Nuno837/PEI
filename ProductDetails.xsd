@@ -4,7 +4,7 @@
   <xs:element name="products">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="productID">
+        <xs:element name="prodID">
           <xs:simpleType>
             <xs:restriction base="xs:integer">
               <xs:minInclusive value="0"/>
