@@ -22,6 +22,15 @@
                         </xs:restriction>
                     </xs:simpleType>
                 </xs:element>
+                <xs:element name="contacts">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:int">
+                            <xs:maxLength value="9"/>
+                            <!--falta a restrição de minOcurr e maxOcurr-->
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <!--faltam mais elementos mas não me apetece pensar sozinho, venham trabalhar seus cabrões-->
             </xs:sequence>
         </xs:complexType>
     </xs:element>
