@@ -3,7 +3,7 @@
     <xs:element name="currency">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="currencyRateID">
+                <xs:element name="currencyID">
                     <xs:simpleType>
                         <xs:restriction base="xs:integer">
                             <xs:minInclusive value="0"/>
