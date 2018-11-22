@@ -4,6 +4,9 @@
     xmlns:p="http://www.estg.ipp.pt/productDetails" 
     xmlns:c="http://www.estg.ipp.pt/currencyDetails" 
     xmlns:u="http://www.estg.ipp.pt/userDetails" elementFormDefault="qualified">
+    <xs:import schemaLocation="productDetails.xsd" namespace="http://www.estg.ipp.pt/productDetails"/>
+    <xs:import schemaLocation="currencyDetails.xsd" namespace="http://www.estg.ipp.pt/currencyDetails"/>
+    <xs:import schemaLocation="userDetails.xsd" namespace="http://www.estg.ipp.pt/userDetails"/>
 
     <xs:element name="sales">
         <xs:complexType>
