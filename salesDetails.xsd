@@ -25,6 +25,15 @@
                     </xs:simpleType>
                 </xs:element>
                 <xs:element name="costumer" type="u:userID"/>
+                <xs:element name="currencyRateID" type="c:currencyID"/>
+                <xs:element name="subTotal">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:decimal">
+                            <xs:minLength value="0"/>
+                            <xs:maxLength value="unbounded"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
