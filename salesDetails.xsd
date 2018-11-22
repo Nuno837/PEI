@@ -50,7 +50,7 @@
                         </xs:restriction>
                     </xs:simpleType>
                 </xs:element>
-                <xs:element name="storeName">
+                <xs:element name="storeN">
                     <xs:simpleType>
                         <xs:restriction base="xs:string">
                             <xs:maxLength value="250"/>
