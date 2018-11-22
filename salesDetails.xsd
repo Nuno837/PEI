@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.estg.ipp.pt/salesDetails" 
-    xmlns="http://www.estg.ipp.pt/salesDetails" 
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    xmlns="http://www.estg.ipp.pt/salesDetails" targetNamespace="http://www.estg.ipp.pt/salesDetails" 
     xmlns:p="http://www.estg.ipp.pt/productDetails" 
     xmlns:c="http://www.estg.ipp.pt/currencyDetails" 
     xmlns:u="http://www.estg.ipp.pt/userDetails" elementFormDefault="qualified">
