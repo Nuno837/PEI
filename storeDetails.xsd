@@ -6,12 +6,19 @@
     <xs:element name="store">
         <xs:complexType>
             <xs:sequence>
-            <xs:element name="storeID" type="s:store"/>
-            <xs:element name="storeName" type="s:storeN"/>
-            <xs:element name="nif">
+                <xs:element name="storeID" type="s:store"/>
+                <xs:element name="storeName" type="s:storeN"/>
+                <xs:element name="nif">
                     <xs:simpleType>
                         <xs:restriction base="xs:integer">
                             <xs:length value="9"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="address">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:maxLength value="250"/>
                         </xs:restriction>
                     </xs:simpleType>
                 </xs:element>
