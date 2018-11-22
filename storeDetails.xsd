@@ -25,13 +25,13 @@
                 </xs:element>
                 <xs:element name="contacts">
                     <xs:simpleType>
-                        <xs:restriction base="xs:int">
+                        <xs:restriction base="xs:integer">
                             <xs:maxLength value="9"/>
-                            <!--falta a restrição de minOcurr e maxOcurr-->
+                            <xs:minOcurr value="1"/>
                         </xs:restriction>
                     </xs:simpleType>
                 </xs:element>
-                <!--faltam mais elementos mas não me apetece pensar sozinho, venham trabalhar seus cabrões-->
+                <xs:element name="salesInfo" type="s:sales"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
