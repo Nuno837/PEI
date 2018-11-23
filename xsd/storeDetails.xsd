@@ -4,6 +4,8 @@
     xmlns:s="http://www.estg.ipp.pt/salesDetails" elementFormDefault="qualified">
     <xs:import schemaLocation="salesDetails.xsd" namespace="http://www.estg.ipp.pt/salesDetails"/>
 
+<!-- TODO: Adicionar elemento rua e codigo postal ao address(ComplexType) para o XML fazer sentido -->
+
     <xs:element name="store">
         <xs:complexType>
             <xs:sequence>
