@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
   xmlns="http://www.estg.ipp.pt/userDetails" targetNamespace="http://www.estg.ipp.pt/userDetails" elementFormDefault="qualified">
   <xs:element name="user">
