@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
-    xmlns="http://www.estg.ipp.pt/storeDetails" targetNamespace="http://www.estg.ipp.pt/storeDetails" 
-    xmlns:s="http://www.estg.ipp.pt/salesDetails" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.estg.ipp.pt/storeDetails" targetNamespace="http://www.estg.ipp.pt/storeDetails" xmlns:s="http://www.estg.ipp.pt/salesDetails" elementFormDefault="qualified">
     <xs:import schemaLocation="salesDetails.xsd" namespace="http://www.estg.ipp.pt/salesDetails"/>
-
-<!-- TODO: Adicionar elemento rua e codigo postal ao address(ComplexType) para o XML fazer sentido -->
-
+    <!-- TODO: Adicionar elemento rua e codigo postal ao address(ComplexType) para o XML fazer sentido -->
     <xs:element name="store">
         <xs:complexType>
             <xs:sequence>
