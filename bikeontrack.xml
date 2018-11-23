@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<stores name="BikeOnTrack" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.estg.ipp.pt/storeDetails" xsi:schemaLocation="http://www.estg.ipp.pt/storeDetails xsd/storeDetails.xsd">
+<stores name="BikeOnTrack" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.estg.ipp.pt/storeDetails" xsi:schemaLocation="http://www.estg.ipp.pt/storeDetails xsd/storeDetails.xsd" xmlns:s="http://www.estg.ipp.pt/salesDetails" xmlns:u="http://www.estg.ipp.pt/userDetails" xmlns:p="http://www.estg.ipp.pt/productDetails" xmlns:c="http://www.estg.ipp.pt/currencyDetails">
     <store>
         <storeID>1</storeID>
         <storeName>BikeOnTrack Porto</storeName>
