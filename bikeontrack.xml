@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<stores name="BikeOnTrack" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.estg.ipp.pt/storeDetails" xsi:schemaLocation="http://www.estg.ipp.pt/storeDetails xsd/storeDetails.xsd" xmlns:s="http://www.estg.ipp.pt/salesDetails" xmlns:u="http://www.estg.ipp.pt/userDetails" xmlns:p="http://www.estg.ipp.pt/productDetails" xmlns:c="http://www.estg.ipp.pt/currencyDetails">
+<stores name="BikeOnTrack" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.estg.ipp.pt/bikeOnTrack" xsi:schemaLocation="http://www.estg.ipp.pt/bikeOnTrack xsd/storeDetails.xsd" xmlns:s="http://www.estg.ipp.pt/salesDetails" xmlns:u="http://www.estg.ipp.pt/userDetails" xmlns:p="http://www.estg.ipp.pt/productDetails" xmlns:c="http://www.estg.ipp.pt/currencyDetails">
     <store>
         <storeID>1</storeID>
         <storeName>BikeOnTrack Porto</storeName>
         <nif>500000001</nif>
-        <address>
-            <rua>Rua Campo Belo nº 112</rua>
-            <codigoPostal>4130-025</codigoPostal>
-        </address>
+        <address>Rua Campo Belo nº 112</address>
         <contacts>910000001</contacts>
         <salesInfo></salesInfo>
     </store>
@@ -15,33 +12,8 @@
         <storeID>2</storeID>
         <storeName>BikeOnTrack Maia</storeName>
         <nif>500000002</nif>
-        <address>
-            <rua>Rua S. Lazaro nº 444</rua>
-            <codigoPostal>4230-423</codigoPostal>
-        </address>
+        <address>Rua S. Lazaro nº 444</address>
         <contacts>910000002</contacts>
-        <salesInfo></salesInfo>
-    </store>
-    <store>
-        <storeID>3</storeID>
-        <storeName>BikeOnTrack Guimarães</storeName>
-        <nif>500000003</nif>
-        <address>
-            <rua>Rua João de Deus nº 42</rua>
-            <codigoPostal>4440-725</codigoPostal>
-        </address>
-        <contacts>910000003</contacts>
-        <salesInfo></salesInfo>
-    </store>
-    <store>
-        <storeID>4</storeID>
-        <storeName>BikeOnTrack Braga</storeName>
-        <nif>500000004</nif>
-        <address>
-            <rua>Rua Amigos de Braga nº 932</rua>
-            <codigoPostal>4531-067</codigoPostal>
-        </address>
-        <contacts>910000004</contacts>
         <salesInfo></salesInfo>
     </store>
 </stores>
