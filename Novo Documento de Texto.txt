@@ -1,0 +1,34 @@
+diferenças
+
+UserDetails:
+
+ProductDetails:
+
+-Matem-se igual
+
+CurrencyDetails:
+
+-Se for NULL passa para USD
+
+SalesDetails:
+
+-Novo dado, "Quantity" que mostra a quantidade do produto a ser vendido
+-Novo dado "Costumer" que indica o id do user que comprou o produto
+
+
+StoreDetails:
+
+-Total de produtos vendidos;
+-Valor total das vendas;
+-Valor médio do preço das vendas;
+
+----------------------
+
+-Nova tabela "ProductListPriceHistory"
+
+-Talvez adicionar um novo xsd que contem os dados das vendas ("SalesData") que contem as informações para cada venda:
+nº total de produtos vendidos;
+nº de produtos diferentes vendidos;
+valor total da venda por cada moeda utilizada;
+o total de unidades vendidas por produto;
+valor vendido por cliente.
