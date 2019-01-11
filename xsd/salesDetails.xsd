@@ -68,7 +68,7 @@
                         </xs:restriction>
                     </xs:simpleType>
                 </xs:element>
-                <xs:element name="order">
+                <xs:element name="quantity">
                     <xs:simpleType>
                         <xs:restriction base="xs:integer">
                             <xs:minInclusive value="0"/>
