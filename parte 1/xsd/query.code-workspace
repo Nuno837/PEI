@@ -1,0 +1,43 @@
+db.salesDetails.aggregate([{$match: {StoreName : "Better Bike Shop"}}])
+
+-------------------------
+
+db.SalesDetails.aggregate(
+[
+{ $match: { StoreName: "Better Bike Shop" } },
+{ $match: { OrderDate: { $regex: /2011-08/ }}}])
+
+----------------------------
+
+db.SalesDetails.aggregate(
+      { $match: { StoreName: "Better Bike Shop" } },
+        { $match: { OrderDate: { $regex: /2011-08/ }}},
+        {$facet: {
+            "Total de produtos":[
+                {$group : {"_id":"$ReceiptID", "total":{$sum: "$Quantity"}}
+                }
+            ],
+            "Numero de produtos":[
+               { $count: "ReceiptLineID" }
+            ] ,
+            "Média das vendas":[
+                {$group : {"_id":"$ReceiptID", "total":{$avg: "$LineTotal"}}
+                }
+            ],
+            "Total de clientes":[
+                {$group : {"_id":"$Costumer"}
+                },
+                {$count: "Costumer"
+                }
+            ],
+        "Valor vendido por cliente":[
+            {$group:{"_id":"$Costumer"}, "total":{$sum: "$LineTotal"}}
+        }
+        ],
+        "Lista de vendas":[
+            {$match:{}
+            }
+        ]
+        }
+        }
+).pretty()

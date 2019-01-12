@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.estg.ipp.pt/prodListPriceHistory" targetNamespace="http://www.estg.ipp.pt/prodListPriceHistory" xmlns:p="http://www.estg.ipp.pt/productDetails" elementFormDefault="qualified">
+    <xs:import schemaLocation="productDetails.xsd" namespace="http://www.estg.ipp.pt/productDetails" />
+    <xs:element name="listPrice">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="productID" type="p:prodID" />
+                <xs:element name="startDate" type="p:sellStartDate" />
+                <xs:element name="endDate" type="p:sellEndDate" />
+                <xs:element name="lPrice" type="p:listPrice" />
+                <xs:element name="modifiedDate">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:dateTime">
+                            <xs:minInclusive value="1900-01-01T00 : 00 : 00.0Z" />
+                            <xs:maxInclusive value="2200-01-01T00 : 00 : 00.0Z" />
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

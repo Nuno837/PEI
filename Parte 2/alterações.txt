@@ -1,0 +1,55 @@
+foi criado o documento xsd productListPriceHistory que valida as informações da tabela csv "ProductListPriceHistory"
+
+foi alterado o documento xsd storeDetails de modo a coorresponder com os novos dados pedidos no enunciado 2
+
+-------------------------------------------------------------
+
+comandos:
+
+\\CRIAÇÃO DA BASE DE DADOS E COLLECTIONS
+
+use db BikeOnTrack \\cria a base de dados BikeOnTrack no MongoDB
+db.createCollection("CurrencyDetails") \\cria a colleção CurrencyDetails(mongoDB shell)
+db.createCollection("ProductDetails") \\cria a colleção ProductDetails(mongoDB shell)
+db.createCollection("ProductListPriceHistory") \\cria a colleção ProductListPriceHistory(mongoDB shell)
+db.createCollection("SalesDetails") \\cria a colleção SalesDetails(mongoDB shell)
+
+
+\\IMPORTAÇÃO DOS DADOS CSV PARA AS RESPETIVAS COLEÇÕES
+
+mongoimport -d BikeOnTrack -c CurrencyDetails ---type csv --file ~/Desktop/moodle/CurrencyDetails.csv --headerline 
+\\importa os dados csv do ficheiro CurrencyDetails para a coleção CurrencyDetails da base de dados BikeOnTrack(cmd shell)
+
+mongoimport -d BikeOnTrack -c ProductDetails ---type csv --file ~/Desktop/moodle/ProductDetails.csv --headerline 
+\\importa os dados csv do ficheiro ProductDetails para a coleção ProductDetails da base de dados BikeOnTrack(cmd shell)
+
+mongoimport -d BikeOnTrack -c ProductListPriceHistory --type csv --file ~/Desktop/moodle/ProductListPriceHistory.csv --headerline 
+\\importa os dados csv do ficheiro ProductListPriceHistory para a coleção ProductListPriceHistory da base de dados BikeOnTrack(cmd shell)
+
+mongoimport -d BikeOnTrack -c SalesDetails ---type csv --file ~/Desktop/moodle/SalesDetails.csv --headerline 
+\\importa os dados csv do ficheiro SalesDetails para a coleção SalesDetails da base de dados BikeOnTrack(cmd shell)
+
+
+\\QUERIES DE PESQUISA
+
+db.SalesDetails.aggregate([{$match:{ StoreName: "Better Bike Shop"}}, 
+{$match:{OrderDate:{$regex:/2011-08/}}}]).pretty()
+\\mostra os dados do SalesDetails para uma loja("Better Bike Shop" neste exemplo) num certo mês (2011-08 neste exemplo)
+
+db.SalesDetails.aggregate([{$match:{StoreName:"Better Bike Shop"}}, 
+{$match:{OrderDate:{$regex:/2011-08/}}}, 
+{$group:{"_id":"$ReceiptID", "total":{$sum: "$Quantity"}}}])
+\\para uma loja especifica("Better Bike Shop" neste exemplo), num mes especifico(2011-08 neste exemplo) mostra a quantidade total de produtos vendidos
+
+db.SalesDetails.aggregate({$match:{StoreName:"Better Bike Shop"}},
+{$match:{OrderDate:{$regex:/2011-08/}}},
+{$facet: {"Total de produtos":[{$group:{"_id":"$ReceiptID", "total":{$sum: "$Quantity"}}}],
+"Numero de produtos":[{$count: "ReceiptLineID" }],
+"Média das vendas":[{$group:{"_id":"$ReceiptID", "total":{$avg: "$LineTotal"}}}],
+"Lista de vendas":[{$match:{}}]}}).pretty()
+\\Adicionado na query o "Numero de produtos", a "Média das vendas" e a "Lista de vendas"
+
+...
+"Total de clientes":[{$group : {"_id":"$Costumer"}},{$count: "Costumer"}],
+        "Valor vendido por cliente":[{$group:{"_id":"$Costumer", "total":{$sum: "$LineTotal"}}}
+\\Adicionado na query o "Total de clientes" e o "Valor vendido por cliente"

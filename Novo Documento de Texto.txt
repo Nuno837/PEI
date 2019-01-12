@@ -1,3 +1,0 @@
-foi criado o documento xsd productListPriceHistory que valida as informações da tabela csv "ProductListPriceHistory"
-
-foi alterado o documento xsd storeDetails de modo a coorresponder com os novos dados pedidos no enunciado 2
